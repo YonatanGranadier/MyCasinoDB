@@ -4,7 +4,7 @@ CREATE DATABASE MyCasinoDB;
 USE MyCasinoDB;
 
 -- 1. RoleTypes
-DROP TABLE IF EXISTS RoleTypes;
+
 CREATE TABLE RoleTypes (
     RoleID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     RoleName VARCHAR(100) UNIQUE NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE RoleTypes (
 );
 
 -- 2. GameTypes
-DROP TABLE IF EXISTS GameTypes;
+
 CREATE TABLE GameTypes (
     GameID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     GameName VARCHAR(100) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE GameTypes (
 );
 
 -- 3. Employees
-DROP TABLE IF EXISTS Employees;
+
 CREATE TABLE Employees (
     EmployeeID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     RoleID INT,
@@ -33,7 +33,7 @@ CREATE TABLE Employees (
 );
 
 -- 4. Customers
-DROP TABLE IF EXISTS Customers;
+
 CREATE TABLE Customers (
     CustomerID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     FirstName VARCHAR(100),
@@ -45,7 +45,7 @@ CREATE TABLE Customers (
 );
 
 -- 5. Tables
-DROP TABLE IF EXISTS Tables;
+
 CREATE TABLE Tables (
     TableID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     GameType INT,
@@ -54,7 +54,7 @@ CREATE TABLE Tables (
 );
 
 -- 6. Games
-DROP TABLE IF EXISTS Games;
+
 CREATE TABLE Games (
     GameSession INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     GameID INT,
@@ -69,7 +69,7 @@ CREATE TABLE Games (
 );
 
 -- 7. Bets
-DROP TABLE IF EXISTS Bets;
+
 CREATE TABLE Bets (
     BetID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     CustomerID INT,
